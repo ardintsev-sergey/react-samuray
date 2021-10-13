@@ -9,22 +9,3 @@
   "head head"
   "nav cnt";
 }
-
-.header {
-  grid-area: head;
-  background: lightgreen;
-}
-
-.header img {
-  width: 50px;
-}
-
-.nav {
-  grid-area: nv;
-  background: green;
-}
-
-.content {
-  grid-area: cnt;
-  background: navy;
-}
