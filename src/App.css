@@ -9,3 +9,9 @@
   "head head"
   "nav cnt";
 }
+
+.app-wrapper-content {
+  grid-area: cnt;
+  background: navy;
+  color: blanchedalmond;
+}
