@@ -1,4 +1,4 @@
-.nav {
+/* .nav {
   grid-area: nav;
   background: green;
 }
@@ -9,9 +9,8 @@
 
 .item a {
   color: #fff;
-  text-decoration: none;
 }
 
-.item a.active {
+.item.active a{
   color: gold;
-}
+} */
