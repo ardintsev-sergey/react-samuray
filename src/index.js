@@ -1,4 +1,4 @@
-import store from './redux/state';
+import store from './redux/reduxStore';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -18,5 +18,8 @@ let rerenderDOMTree = (state) => {
 
 rerenderDOMTree(store.getState());
 
-store.subscribe(rerenderDOMTree);
+store.subscribe(() => {
+  let state = store.getState();
+  rerenderDOMTree(state);
+});
 

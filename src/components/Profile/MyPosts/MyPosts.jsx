@@ -1,5 +1,6 @@
+// презентационная компонента
 import React from 'react';
-import { addPostActionCreator, updateNewPostTextActionCreator} from '../../../redux/state';
+import { addPostActionCreator, updateNewPostTextActionCreator} from '../../../redux/profileReducer';
 import styles from './MyPosts.module.css';
 import Post from './Post/Post'
 
@@ -7,19 +8,15 @@ const MyPosts = (props) => {
   let postsElements = props.posts
     .map(post => <Post message={post.message} likesCount={post.likesCount} />);
 
-    let newPostElement = React.createRef();
+  let newPostElement = React.createRef();
 
-  let addPost = () => {    
-    // let text = newPostElement.current.value;
-    // props.addPost(text);
-    // props.updateNewPostText('');
-    props.dispatch(addPostActionCreator());
+  let addPost = () => {        
+    props.addPost();    
   }
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    const action = updateNewPostTextActionCreator(text);
-    props.dispatch(action);
+    props.updateNewPostText(text);
   }
 
   return (
